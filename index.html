@@ -1,13 +1,214 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#151515"><meta name="description" content="APERTURE. Independent film and image making. An interactive collection of studies in light, landscape and motion."><title>APERTURE / A different way of seeing.</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23151515'/%3E%3Cpath d='M20 7 32 29H8Z' fill='%23eee'/%3E%3C/svg%3E"><link rel="preload" as="font" href="assets/display.ttf" type="font/ttf" crossorigin><link rel="preload" as="image" href="assets/alpine-2400.jpg" imagesrcset="assets/alpine-960.jpg 960w, assets/alpine-2400.jpg 2400w" imagesizes="100vw"><link rel="stylesheet" href="styles.css"></head>
-<body><a class="skip" href="#works">Skip to selected work</a><header><a href="#top" class="brand">APERTURE<span>®</span></a><span class="header-note">INDEPENDENT IMAGE MAKERS<br>FRAME BY FRAME.</span><a href="#contact" class="header-link">Start a story ↗</a></header>
-<main id="top"><section class="opening" id="opening"><div class="screen"><div class="landscape"><img src="assets/alpine-2400.jpg" srcset="assets/alpine-960.jpg 960w, assets/alpine-2400.jpg 2400w" sizes="100vw" width="2400" height="1600" alt="A sharp mountain summit emerging from mist" fetchpriority="high"></div><div class="veil"></div><div class="crop-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="hero-title"><span class="eyebrow">FILM. FEELING. A LITTLE FRICTION.</span><h1>A different<br>way of <em>seeing.</em></h1></div><div class="frame-note"><span>FIELD NOTES / 01</span><span>46°35′ N / 08°01′ E</span></div><div class="aperture-word" aria-hidden="true">APERTURE</div><div class="hero-foot"><a href="#works">SCROLL TO OPEN THE FRAME <b>↓</b></a><span>Stories that stay<br>after the screen goes dark.</span><output id="frame">FRAME 001</output></div><div class="shutter left"></div><div class="shutter right"></div></div></section>
-<section class="manifesto"><span class="eyebrow">01 / OUR POINT OF VIEW</span><p>Some things<br>should be <em>felt.</em><br>Then understood.</p><div class="manifesto-aside">We follow the light.<br>Wait for the weather.<br>Find the frame worth keeping.<span>Film & direction / Brand stories / Image making</span></div></section>
-<section class="work-section" id="works"><div class="work-heading"><span class="eyebrow">02 / SELECTED VISUAL STUDIES</span><h2>In the<br><em>frame.</em></h2><div class="filters" aria-label="Filter studies"><button data-filter="all" aria-pressed="true">All / 03</button><button data-filter="landscape" aria-pressed="false">Landscape</button><button data-filter="nature" aria-pressed="false">Nature</button></div></div><div class="filmstrip">
-<button class="work" data-category="landscape" data-film="0"><span class="work-image"><img src="assets/alpine-960.jpg" srcset="assets/alpine-960.jpg 960w, assets/alpine-2400.jpg 2400w" sizes="(max-width:700px) 90vw, 70vw" width="2400" height="1600" alt="Alpine summit in a field of cloud" loading="lazy"><span class="work-open">EXPLORE STUDY ↗</span></span><span class="work-info"><span>01 / ALTITUDE</span><span>LANDSCAPE · VISUAL STUDY</span></span></button>
-<button class="work" data-category="nature" data-film="1"><span class="work-image"><img src="assets/ocean-960.jpg" srcset="assets/ocean-960.jpg 960w, assets/ocean-2400.jpg 2400w" sizes="(max-width:700px) 90vw, 70vw" width="2400" height="1600" alt="Ocean swell under a pale sky" loading="lazy"><span class="work-open">EXPLORE STUDY ↗</span></span><span class="work-info"><span>02 / BETWEEN TIDES</span><span>NATURE · VISUAL STUDY</span></span></button>
-<button class="work" data-category="nature" data-film="2"><span class="work-image"><img src="assets/forest-960.jpg" srcset="assets/forest-960.jpg 960w, assets/forest-2400.jpg 2400w" sizes="(max-width:700px) 90vw, 70vw" width="2400" height="1600" alt="Tall trees and shafts of forest light" loading="lazy"><span class="work-open">EXPLORE STUDY ↗</span></span><span class="work-info"><span>03 / QUIET GROUND</span><span>NATURE · VISUAL STUDY</span></span></button>
-</div></section>
-<section class="contact" id="contact"><div><span class="eyebrow">03 / THE NEXT FRAME IS YOURS</span><h2>What do<br>you <em>see?</em></h2><p>Every story starts with something small.<br>A feeling. A place. A question.</p></div><form id="brief"><label for="story">The story you want to tell</label><textarea id="story" rows="3" maxlength="1200" required placeholder="An idea that won't leave you alone."></textarea><label for="format">Choose a format</label><select id="format"><option>Brand film</option><option>Documentary short</option><option>Visual campaign</option></select><button type="submit">Make a starting brief <span>↓</span></button><p id="brief-status" role="status">A local document, ready for your next conversation.</p></form></section></main>
-<footer><a href="#top" class="footer-logo">APERTURE</a><div><span>INDEPENDENT FILM STUDIO CONCEPT<br>BY BLACKSTACK STUDIO</span><span>IMAGES / UNSPLASH<br>NO ENQUIRY IS SENT FROM THIS SITE</span><a href="https://github.com/polina-kolianikova/aperture-films">SOURCE ↗</a><a href="#top">BACK TO TOP ↑</a></div></footer>
-<dialog id="viewer"><button id="close-viewer" aria-label="Close study">×</button><img id="viewer-image" alt=""><div class="viewer-copy"><span id="viewer-number" class="eyebrow"></span><h2 id="viewer-title"></h2><p id="viewer-text"></p><div class="viewer-nav"><button id="previous">← Previous study</button><button id="next">Next study →</button></div></div></dialog><script type="module" src="app.js"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#151515" />
+    <meta
+      name="description"
+      content="APERTURE. Independent film and image making. An interactive collection of studies in light, landscape and motion."
+    />
+    <title>APERTURE / A different way of seeing.</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23151515'/%3E%3Cpath d='M20 7 32 29H8Z' fill='%23eee'/%3E%3C/svg%3E"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="assets/display.ttf"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/alpine-2400.jpg"
+      imagesrcset="assets/alpine-960.jpg 960w, assets/alpine-2400.jpg 2400w"
+      imagesizes="100vw"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css?v=7c182c38f686ae763bd2aa83951bea57a4f73442668238ee329c0073a777fcc9"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#works">Skip to selected work</a>
+    <header>
+      <a href="#top" class="brand">APERTURE<span>®</span></a
+      ><span class="header-note"
+        >INDEPENDENT IMAGE MAKERS<br />FRAME BY FRAME.</span
+      ><a href="#contact" class="header-link">Start a story ↗</a>
+    </header>
+    <main id="top">
+      <section class="opening" id="opening">
+        <div class="screen">
+          <div class="landscape">
+            <img
+              src="assets/alpine-2400.jpg"
+              srcset="assets/alpine-960.jpg 960w, assets/alpine-2400.jpg 2400w"
+              sizes="100vw"
+              width="2400"
+              height="1600"
+              alt="A sharp mountain summit emerging from mist"
+              fetchpriority="high"
+            />
+          </div>
+          <div class="veil"></div>
+          <div class="crop-corners" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+          </div>
+          <div class="hero-title">
+            <span class="eyebrow">FILM. FEELING. A LITTLE FRICTION.</span>
+            <h1>A different<br />way of <em>seeing.</em></h1>
+          </div>
+          <div class="frame-note">
+            <span>FIELD NOTES / 01</span><span>46°35′ N / 08°01′ E</span>
+          </div>
+          <div class="aperture-word" aria-hidden="true">APERTURE</div>
+          <div class="hero-foot">
+            <a href="#works">SCROLL TO OPEN THE FRAME <b>↓</b></a
+            ><span>Stories that stay<br />after the screen goes dark.</span
+            ><output id="frame">FRAME 001</output>
+          </div>
+          <div class="shutter left"></div>
+          <div class="shutter right"></div>
+        </div>
+      </section>
+      <section class="manifesto">
+        <span class="eyebrow">01 / OUR POINT OF VIEW</span>
+        <p>Some things<br />should be <em>felt.</em><br />Then understood.</p>
+        <div class="manifesto-aside">
+          We follow the light.<br />Wait for the weather.<br />Find the frame
+          worth keeping.<span
+            >Film & direction / Brand stories / Image making</span
+          >
+        </div>
+      </section>
+      <section class="work-section" id="works">
+        <div class="work-heading">
+          <span class="eyebrow">02 / SELECTED VISUAL STUDIES</span>
+          <h2>In the<br /><em>frame.</em></h2>
+          <div class="filters" aria-label="Filter studies">
+            <button data-filter="all" aria-pressed="true">All / 03</button
+            ><button data-filter="landscape" aria-pressed="false">
+              Landscape</button
+            ><button data-filter="nature" aria-pressed="false">Nature</button>
+          </div>
+        </div>
+        <div class="filmstrip">
+          <button class="work" data-category="landscape" data-film="0">
+            <span class="work-image"
+              ><img
+                src="assets/alpine-960.jpg"
+                srcset="
+                  assets/alpine-960.jpg   960w,
+                  assets/alpine-2400.jpg 2400w
+                "
+                sizes="(max-width:700px) 90vw, 70vw"
+                width="2400"
+                height="1600"
+                alt="Alpine summit in a field of cloud"
+                loading="lazy"
+              /><span class="work-open">EXPLORE STUDY ↗</span></span
+            ><span class="work-info"
+              ><span>01 / ALTITUDE</span
+              ><span>LANDSCAPE · VISUAL STUDY</span></span
+            >
+          </button>
+          <button class="work" data-category="nature" data-film="1">
+            <span class="work-image"
+              ><img
+                src="assets/ocean-960.jpg"
+                srcset="assets/ocean-960.jpg 960w, assets/ocean-2400.jpg 2400w"
+                sizes="(max-width:700px) 90vw, 70vw"
+                width="2400"
+                height="1600"
+                alt="Ocean swell under a pale sky"
+                loading="lazy"
+              /><span class="work-open">EXPLORE STUDY ↗</span></span
+            ><span class="work-info"
+              ><span>02 / BETWEEN TIDES</span
+              ><span>NATURE · VISUAL STUDY</span></span
+            >
+          </button>
+          <button class="work" data-category="nature" data-film="2">
+            <span class="work-image"
+              ><img
+                src="assets/forest-960.jpg"
+                srcset="
+                  assets/forest-960.jpg   960w,
+                  assets/forest-2400.jpg 2400w
+                "
+                sizes="(max-width:700px) 90vw, 70vw"
+                width="2400"
+                height="1600"
+                alt="Tall trees and shafts of forest light"
+                loading="lazy"
+              /><span class="work-open">EXPLORE STUDY ↗</span></span
+            ><span class="work-info"
+              ><span>03 / QUIET GROUND</span
+              ><span>NATURE · VISUAL STUDY</span></span
+            >
+          </button>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div>
+          <span class="eyebrow">03 / THE NEXT FRAME IS YOURS</span>
+          <h2>What do<br />you <em>see?</em></h2>
+          <p>
+            Every story starts with something small.<br />A feeling. A place. A
+            question.
+          </p>
+        </div>
+        <form id="brief">
+          <label for="story">The story you want to tell</label
+          ><textarea
+            id="story"
+            rows="3"
+            maxlength="1200"
+            required
+            placeholder="An idea that won't leave you alone."
+          ></textarea
+          ><label for="format">Choose a format</label
+          ><select id="format">
+            <option>Brand film</option>
+            <option>Documentary short</option>
+            <option>Visual campaign</option></select
+          ><button type="submit">Make a starting brief <span>↓</span></button>
+          <p id="brief-status" role="status">
+            A local document, ready for your next conversation.
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a href="#top" class="footer-logo">APERTURE</a>
+      <div>
+        <span>INDEPENDENT FILM STUDIO CONCEPT<br />BY BLACKSTACK STUDIO</span
+        ><span>IMAGES / UNSPLASH<br />NO ENQUIRY IS SENT FROM THIS SITE</span
+        ><a href="https://github.com/polina-kolianikova/aperture-films"
+          >SOURCE ↗</a
+        ><a href="#top">BACK TO TOP ↑</a>
+      </div>
+    </footer>
+    <dialog id="viewer" aria-labelledby="viewer-title">
+      <button id="close-viewer" aria-label="Close study">×</button
+      ><img id="viewer-image" alt="" />
+      <div class="viewer-copy">
+        <span id="viewer-number" class="eyebrow"></span>
+        <h2 id="viewer-title"></h2>
+        <p id="viewer-text"></p>
+        <div class="viewer-nav">
+          <button id="previous">← Previous study</button
+          ><button id="next">Next study →</button>
+        </div>
+      </div>
+    </dialog>
+    <script
+      type="module"
+      src="app.js?v=5a30c220d0d3af2c671b59a4af32f261ab10f69591092400c49bb72c296d0133"
+    ></script>
+  </body>
+</html>
