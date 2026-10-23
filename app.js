@@ -24,10 +24,11 @@ function paint() {
     document.documentElement.dataset.renderMode = "offscreen";
     return;
   }
-  const p = clamp(-rect.top / Math.max(1, opening.offsetHeight - innerHeight));
+  const p = clamp(-rect.top / Math.max(1, opening.offsetHeight - $(".screen").clientHeight));
   if (!reduce.matches) {
+    const mobile = matchMedia("(max-width: 700px), (max-height: 500px) and (pointer: coarse)").matches;
     const wide = smooth(p / 0.7),
-      close = smooth((p - 0.83) / 0.17);
+      close = mobile ? 0 : smooth((p - 0.83) / 0.17);
     land.style.clipPath = `inset(${(innerWidth < 701 ? 19 : 17) * (1 - wide)}% ${(innerWidth < 701 ? 12 : 24) * (1 - wide)}%)`;
     photo.style.transform = `scale(${1.08 + 0.12 * wide}) translateY(${p * -3}%)`;
     title.style.opacity = 1 - smooth((p - 0.18) / 0.35);
@@ -83,6 +84,15 @@ function showStudy(i) {
   $("#viewer-number").textContent = `VISUAL STUDY / 0${selected + 1}`;
   $("#viewer-title").textContent = s.name;
   $("#viewer-text").textContent = s.text;
+  const shownImage = $("#viewer-image").src;
+  if (dialog.open) {
+    $("#viewer-title").tabIndex = -1;
+    $("#viewer-title").focus({ preventScroll: true });
+    dialog.scrollTop = 0;
+  }
+  $("#viewer-image").decode().then(() => {
+    if (dialog.open && $("#viewer-image").src === shownImage) dialog.scrollTop = 0;
+  }).catch(() => {});
 }
 document.querySelectorAll("[data-film]").forEach((b) =>
   b.addEventListener("click", () => {
